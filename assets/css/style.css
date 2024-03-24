@@ -88,7 +88,7 @@ img {
 }
 
 /*========== REUSABLE CSS CLASSES ==========*/
-.container{
+.container {
   max-width: 1120px;
   margin-inline: 1.5rem;
 }
@@ -102,17 +102,17 @@ img {
   padding-block: 5rem 1rem;
 }
 
-.section__title{
+.section__title {
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
   text-align: center;
   margin-bottom: 1rem;
-
-  .main {
-    overflow: hidden;
-  }
-
 }
+
+.main {
+  overflow: hidden;
+}
+
 /*========== HEADER & NAV ==========*/
 .header{
   position: fixed;
@@ -220,6 +220,7 @@ img {
 }
 
 /*========== HOME ============*/
+
 .home__container{
   padding-top: 2.5rem;
   row-gap: 2rem;
@@ -233,7 +234,6 @@ img {
 
 .home__data{
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .home__title{
@@ -246,7 +246,7 @@ img {
   color: var(--first-color);
 }
 
-.home__destription{
+.home__description{
   margin-bottom: 3rem;
 }
 
@@ -254,7 +254,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: .6rem;
+  column-gap: .5rem;
 }
 
 /*========== BUTTON ==========*/
@@ -262,7 +262,7 @@ img {
   background-color: var(--white-color);
   color: var(--black-color);
   font-weight: var(--font-bold);
-  padding: .3em 1.5rem .5rem .5rem;
+  padding: .5rem 1.5rem .5rem .5rem;
   border-radius: 4rem;
   display: inline-flex;
   align-items: center;
@@ -295,6 +295,7 @@ img {
 }
 
 /*================ NEWS =============*/
+
 .new__data{
   text-align: center;  
 }
@@ -309,12 +310,13 @@ img {
 
 .new__card{
   position: relative;
-  width: 300px;
+  width: 200px;
   background: var(--gradient-card);
   padding: 9rem .75rem 1.5rem .75rem;
   border: 2px solid var(--first-color-light);
   border-radius: 1.5rem;
 }
+
 .new__img{
   position: absolute;
   top: -4.5rem;
@@ -529,6 +531,7 @@ img {
   text-align: center;
   font-size: var(--small-font-size);
 }
+
 /*=========== SCROLL BAR ============*/
 ::-webkit-scrollbar{
   width: .6rem;
@@ -547,7 +550,7 @@ img {
 .scrollup{
   position: fixed;
   right: 1rem;
-  bottom: -50rem;
+  bottom: -50%;
   background-color: var(--container-color);
   color: var(--title-color);
   box-shadow: 0 12px 24px hsla(228, 48%, .5);
@@ -562,32 +565,34 @@ img {
   transform: translateY(-.5rem);
 }
 
+/*Show Scroll Up */
+.show-scroll{
+  bottom: 3rem;
+}
+
 /*=========== BREAKPOINTS ===========*/
+/* For small devices */
 @media screen and (max-width: 320px){
   .container{
     margin-inline: 1rem;
   }
-
   .home__title{
     font-size: 2rem;
   }
-
   .home__buttons{
     flex-direction: column;
     row-gap: 1.5rem;
   }
-
   .shop__container{
     grid-template-columns: 160px;
     justify-content: center;
   }
-
-  .foot__content{
+  .footer__container{
     grid-template-columns: max-content;
   }
 }
 
-/**===========For medium devvices ======*/
+/*=========== For medium devices ======*/
 @media screen and (min-width: 576px){
   .home__container,
   .new__container,
@@ -615,9 +620,11 @@ img {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
   }
+
   .new__card:nth-child(even){
     transform: translateY(10rem);
   }
+
   .shop__container{
     grid-template-columns: repeat(3, 160px);
   }
@@ -629,13 +636,15 @@ img {
 }
 
 /*==========For large devices===============*/
-@media screen and (min-width: 1150px){
+@media screen and(max-width: 1150px){
   .container{
     margin-inline: auto;
   }
+
   .section{
     padding-block: 7rem 2rem;
   }
+
   .section__title{
     margin-bottom: 1.5rem;
   }
@@ -661,6 +670,7 @@ img {
     font-size: 1.5rem;
     column-gap: 1rem;
   }
+
   .home__container{
     grid-template-columns: 480px 535px;
     align-items: center;
@@ -680,6 +690,7 @@ img {
     justify-content: initial;
     column-gap: 1.5rem;
   }
+
   .new__container{
     grid-template-columns: 412px 490px;
     align-items: center;
@@ -694,6 +705,12 @@ img {
   }
   .new__title{
     font-size: var(--h3-font-size);
+  }
+
+  .shop__container{
+    grid-template-columns: repeat(3, 240px);
+    gap: 8.5rem 4rem;
+    padding-top: 7.5rem;
   }
   .shop__card{
     padding: 10.5rem 1.5rem 2rem;
@@ -714,6 +731,7 @@ img {
     bottom: 2rem;
     font-size: 1.5rem;
   }
+
   .care__container{
     grid-template-columns: 480px 385px;
     align-items: center;
@@ -721,11 +739,12 @@ img {
     padding-top: 3rem;
   }
   .care__img{
-    width: 1.5px;
+    width: 480px;
   }
   .care__list{
     row-gap: 1.5rem;
   }
+  
   .contact__container{
     grid-template-columns: 280px 480px;
     justify-content: center;
